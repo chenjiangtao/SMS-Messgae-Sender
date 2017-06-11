@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/fangcs/sms/protocol/Connection.java=UTF-8
+encoding//src/main/java/com/fangcs/sms/protocol/cmpp/CMPPSession.java=UTF-8
+encoding//src/main/java/com/fangcs/sms/protocol/cmpp/message/CMPPBaseMessage.java=UTF-8
+encoding//src/test/java/com/fangcs/sms/protocol/SMGPTester.java=UTF-8
+encoding/<project>=UTF-8
