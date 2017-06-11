@@ -9,13 +9,7 @@ import org.apache.log4j.Logger;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created with IntelliJ IDEA.
- * User: gaudi.gao
- * Date: 14-6-17
- * Time: 下午2:16
- * To change this template use File | Settings | File Templates.
- */
+
 public class CMPPTester {
     private static Logger log = LogManager.getLogger(CMPPTester.class);
     private static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
