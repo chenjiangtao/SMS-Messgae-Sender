@@ -3,17 +3,17 @@
 
 ## **HTTP的提交与推送**
 
-*	msgid
+*	**msgid**
 	短消息标志，由服务器生成，在用户提交短信后返回给客户端,一条短信的msgid是唯一的一条长（超
         过70个中文字符）按其被拆分的短信条数返回数个msgid,用户可以使用msgid查询该短信的状态。
 
-*	客户端提交类型
+*	**客户端提交类型**
      -   短信发送
      - 查询状态报告，允许每30秒查询一次
      -	查询短信回复，允许每10秒查询一次
      - 提交方式为HTTP协议GET请求
-*	提交参数定义
-*	短信提交：
+*	**提交参数定义**
+*	**短信提交：**
      -	服务映射名：HttpSendSM
      -	帐号（acsrccode），即企业帐号或子帐号
      -	密码（pswd）
@@ -23,34 +23,32 @@
      - [例子](http://222.66.24.235/ctmp/HttpSendSM?acsrccode=10658939312345&pswd=12345&mobile=13564900192&msg=hello&needstatus=true) 
 
 			
-	查询状态报告：
-1)	服务映射名：HttpQueryReport
-2)	帐号(acsrccode)，即企业帐号或子帐号
-3)	密码(pswd)
-4)	消息号(msgid)
-5)	开始时间(start)，格式yyyymmddhhmmss
-6)	结束时间(end)，格式yyyymmddhhmmss
-7)	查询标志(flag)，取值1表示按msgid查询，2表示按时间段查询
-8)	例子：
-http://222.66.24.235/ctmp/HttpQueryReport?acsrccode=10658939312345&pswd=12345&msgid=12345&start=20090211060000&end=20090211080000&flag=1
-				
-	查询短信回复：
-1)	服务映射名：HttpQueryDeliver
-2)	帐号(acsrccode) ，即企业帐号或子帐号
-3)	密码(pswd)
-4)	开始时间(start) ，格式yyyymmddhhmmss
-5)	结束时间(end) ，格式yyyymmddhhmmss
-6)	查询结果是否删除的标记(indicate)，true删除，false保留
-7)	是否包含子帐号短信回复(all)，true 包含，false 不包含
-8)	例子：
-http://222.66.24.235/ctmp/HttpQueryDeliver?acsrccode=10658939312345&pswd=12345&start=20090212000000&end=20090212080000&indicate=true
+*	**查询状态报告**：
+     -	服务映射名：HttpQueryReport
+     -	帐号(acsrccode)，即企业帐号或子帐号
+     -	密码(pswd)
+     -	消息号(msgid)
+     -	开始时间(start)，格式yyyymmddhhmmss
+     -	结束时间(end)，格式yyyymmddhhmmss
+     -	查询标志(flag)，取值1表示按msgid查询，2表示按时间段查询
+     -	[例子](http://222.66.24.235/ctmp/HttpQueryReport?acsrccode=10658939312345&pswd=12345&msgid=12345&start=20090211060000&end=20090211080000&flag=1)
+			
+*	**查询短信回复：**
+     -	服务映射名：HttpQueryDeliver
+     -	帐号(acsrccode) ，即企业帐号或子帐号
+     -	密码(pswd)
+     -	开始时间(start) ，格式yyyymmddhhmmss
+     -	结束时间(end) ，格式yyyymmddhhmmss
+     -	查询结果是否删除的标记(indicate)，true删除，false保留
+     -	是否包含子帐号短信回复(all)，true 包含，false 不包含
+     - [例子](http://222.66.24.235/ctmp/HttpQueryDeliver?acsrccode=10658939312345&pswd=12345&start=20090212000000&end=20090212080000&indicate=true)
 
-	注：
-1)	查询起始时间据当天不超过2天
-2)	查询开始时间和结束时间要在一个自然天内
-3)	用msgid查询，如果该消息距当天超过三天，则不返回结果
-4)	时间格式：yyyymmddhhmmss
-5)	all标志只在acsrccode为企业主帐号时有效
+	**注：**
+*	查询起始时间据当天不超过2天
+*	查询开始时间和结束时间要在一个自然天内
+*	用msgid查询，如果该消息距当天超过三天，则不返回结果
+*	时间格式：yyyymmddhhmmss
+*	all标志只在acsrccode为企业主帐号时有效
 		
 
 4.	短信提交响应定义
