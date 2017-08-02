@@ -51,27 +51,21 @@
 *	all标志只在acsrccode为企业主帐号时有效
 		
 
-4.	短信提交响应定义
-	提交成功的短信，返回一个提交响应，其中包含的msgid个数与拆分的条数一致。
-	提交失败的短信，返回一个包含相应错误代码的提交响应。
-	字段：
-1)	resptime
-2)	respstatus
-3)	msgids
+*	短信提交响应定义
+*	提交成功的短信，返回一个提交响应，其中包含的msgid个数与拆分的条数一致。
+*	提交失败的短信，返回一个包含相应错误代码的提交响应。
+*	字段：resptime ; respstatus ; msgids
 
-	消息格式：
-resptime,respstatus
-msgid1
-msgid2
+*	消息格式：resptime , respstatus , msgid1 , msgid2
 
-5.	状态报告查询响应定义
+*	状态报告查询响应定义
 	字段：
-1)	resptime
-2)	respstatus
-3)	msgid      短信标志
-4)	reporttime   手机收到短信的时间
-5)	mobile      手机号码
-6)	reportstatus  状态报告值
+       - resptime
+       - respstatus
+       - msgid      短信标志
+       - reporttime   手机收到短信的时间
+       - mobile      手机号码
+       - reportstatus  状态报告值
 
 	消息格式： 
 resptime,respstatus
